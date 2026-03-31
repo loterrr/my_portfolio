@@ -102,13 +102,27 @@ export async function getCertifications(): Promise<Certification[]> {
   )
 }
 
+import { createSupabaseServerClient } from "@/lib/supabase/server"
+
 export async function getFeedbacks(): Promise<Feedback[]> {
-  return Promise.resolve(
-    MOCK_FEEDBACKS.sort(
-      (a, b) =>
-        new Date(b.created_at).getTime() - new Date(a.created_at).getTime(),
-    ),
-  )
+  try {
+    const supabase = await createSupabaseServerClient()
+    const { data, error } = await supabase
+      .from("feedbacks")
+      .select("*")
+      .eq("is_approved", true)
+      .order("created_at", { ascending: false })
+
+    if (error) {
+      console.error("Supabase error fetching feedbacks:", error)
+      return []
+    }
+
+    return data || []
+  } catch (error) {
+    console.error("Error fetching feedbacks:", error)
+    return []
+  }
 }
 
 export async function getResearch(): Promise<Research> {

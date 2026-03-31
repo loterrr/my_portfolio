@@ -290,16 +290,16 @@ export function FeedbackSection({ feedbacks }: { feedbacks: Feedback[] }) {
         </p>
       </CodeHeading>
 
-      <div className="grid gap-10 lg:grid-cols-[1fr_400px]">
+      <div className="grid gap-12 lg:grid-cols-[1fr_380px] items-start">
         {/* ── Left: Form ── */}
-        <div>
+        <div className="space-y-6">
           <OpenTag
             tag="form"
             attrs={{ action: "/api/feedback" }}
           />
           <form
             onSubmit={submit}
-            className="mt-4 mb-4 space-y-4 pl-4"
+            className="mt-6 space-y-5 pl-4"
           >
             <Field
               id="feedback-name"
@@ -371,21 +371,22 @@ export function FeedbackSection({ feedbacks }: { feedbacks: Feedback[] }) {
         </div>
 
         {/* ── Right: Feedbacks sidebar ── */}
-        <div className="flex flex-col gap-3 lg:pt-6">
+        <div className="flex flex-col gap-6 lg:pt-2 border-l border-border/10 pl-6 lg:pl-10">
           {/* Average rating */}
           {feedbacks.length > 0 && (
-            <div className="flex items-center gap-3 mb-2">
-              <span className="text-2xl font-bold text-foreground tracking-tight">
+            <div className="flex items-center gap-4 py-2 px-3 rounded-lg bg-code-keyword/5 border border-code-keyword/10">
+              <span className="text-3xl font-bold text-foreground tabular-nums">
                 {avg.toFixed(1)}
               </span>
+              <div className="h-8 w-px bg-border/20 mx-1" />
               <div>
                 <StarRating
                   value={Math.round(avg)}
                   readonly
                   size="sm"
                 />
-                <p className="text-[10px] text-muted-foreground/50 mt-0.5">
-                  {feedbacks.length}{" "}
+                <p className="text-[10px] text-muted-foreground/60 mt-0.5 font-medium uppercase tracking-tighter">
+                  Based on {feedbacks.length}{" "}
                   {feedbacks.length === 1 ? "review" : "reviews"}
                 </p>
               </div>
