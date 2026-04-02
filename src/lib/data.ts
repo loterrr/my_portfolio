@@ -102,15 +102,14 @@ export async function getCertifications(): Promise<Certification[]> {
   )
 }
 
-import { createSupabaseServerClient } from "@/lib/supabase/server"
+import { createSupabaseStaticClient } from "@/lib/supabase/static"
 
 export async function getFeedbacks(): Promise<Feedback[]> {
   try {
-    const supabase = await createSupabaseServerClient()
+    const supabase = createSupabaseStaticClient()
     const { data, error } = await supabase
       .from("feedbacks")
       .select("*")
-      .eq("is_approved", true)
       .order("created_at", { ascending: false })
 
     if (error) {
