@@ -79,7 +79,7 @@ export function SkillsSection({ skills }: { skills: Skill[] }) {
           Expertise
         </h2>
         <p className="mt-1 text-sm text-code-comment">
-          {"// technologies & tools I work with"}
+          {"// credits to w3school"}
         </p>
       </CodeHeading>
 
@@ -149,11 +149,10 @@ export function SkillsSection({ skills }: { skills: Skill[] }) {
                 <button
                   key={cat}
                   onClick={() => setActiveTab(cat)}
-                  className={`relative flex items-center gap-2 border-r border-border/20 px-4 py-2.5 text-xs font-medium transition-colors ${
-                    isActive
-                      ? "bg-background/80 text-foreground dark:bg-background/50"
-                      : "text-muted-foreground/50 hover:bg-background/40 hover:text-muted-foreground dark:hover:bg-background/20"
-                  }`}
+                  className={`relative flex items-center gap-2 border-r border-border/20 px-4 py-2.5 text-xs font-medium transition-colors ${isActive
+                    ? "bg-background/80 text-foreground dark:bg-background/50"
+                    : "text-muted-foreground/50 hover:bg-background/40 hover:text-muted-foreground dark:hover:bg-background/20"
+                    }`}
                 >
                   <Icon className="size-3.5" />
                   <span className="hidden sm:inline">{cat}</span>

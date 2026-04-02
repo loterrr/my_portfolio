@@ -36,7 +36,7 @@ export function FeaturedProjectsSection({ projects }: { projects: Project[] }) {
           Projects
         </h2>
         <p className="mt-1 text-sm text-code-comment">
-          {"// a selection of my recent work"}
+          {"// 4am projects"}
         </p>
       </CodeHeading>
 

@@ -48,15 +48,15 @@ export function AboutSection({
   const yearsOfExperience =
     experiences.length > 0
       ? (() => {
-          const earliest = experiences.reduce(
-            (min, exp) => (exp.start_date < min ? exp.start_date : min),
-            experiences[0].start_date,
-          )
-          return Math.max(
-            1,
-            new Date().getFullYear() - new Date(earliest).getFullYear(),
-          )
-        })()
+        const earliest = experiences.reduce(
+          (min, exp) => (exp.start_date < min ? exp.start_date : min),
+          experiences[0].start_date,
+        )
+        return Math.max(
+          1,
+          new Date().getFullYear() - new Date(earliest).getFullYear(),
+        )
+      })()
       : 0
   const projectCount = projects.length
 
@@ -92,12 +92,13 @@ export function AboutSection({
       tag="section"
       attrs={{ id: "about" }}
     >
+      {/* Friendly Neighborhood Developer */}
       <CodeHeading tag="h2">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           About me
         </h2>
         <p className="mt-1 text-sm text-code-comment">
-          {"// a bit about who I am"}
+          {"// your friendly neighborhood spider-man"}
         </p>
       </CodeHeading>
 
@@ -121,7 +122,7 @@ export function AboutSection({
                 <span className="text-xs text-white/80 bg-background/50 px-1.5 py-0.5 rounded-md backdrop-blur-sm">
                   &lt;<span className="text-code-keyword">img</span>{" "}
                   <span className="text-code-attr">alt</span>=
-                  <span className="text-code-string">&quot;me&quot;</span> /&gt;
+                  <span className="text-code-string">&quot;peter_parker_behind_the_mask&quot;</span> /&gt;
                 </span>
               </div>
             </div>

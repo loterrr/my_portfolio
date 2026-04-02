@@ -21,7 +21,7 @@ export function EducationSection({ education }: EducationSectionProps) {
       <CodeHeading tag="h2">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Education</h2>
         <p className="mt-1 text-sm text-code-comment">
-          {"// where I learned my craft"}
+          {"// training ground?"}
         </p>
       </CodeHeading>
 
@@ -92,7 +92,7 @@ export function EducationSection({ education }: EducationSectionProps) {
 
             {/* Decorator */}
             <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity">
-               <span className="font-mono text-[10px] text-code-comment">{"// <edu />"}</span>
+              <span className="font-mono text-[10px] text-code-comment">{"// <edu />"}</span>
             </div>
           </motion.div>
         ))}

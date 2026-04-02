@@ -114,17 +114,17 @@ export function HeroSection({ profile }: { profile: Profile | null }) {
               <span className="text-code-function">dev</span> = {"{\n"}
               {"  "}
               <span className="text-code-attr">name</span>:{" "}
-              <span className="text-code-string">&quot;{fullName}&quot;</span>,
+              <span className="text-code-string">&quot;loter&quot;</span>,
               {"\n  "}
-              <span className="text-code-attr">role</span>:{" "}
-              <span className="text-code-string">&quot;Full-Stack&quot;</span>,
+              <span className="text-code-attr">originStory</span>:{" "}
+              <span className="text-code-string">&quot;Bitten by a radioactive bug (the software kind)&quot;</span>,
               {"\n  "}
-              <span className="text-code-attr">passionate</span>:{" "}
-              <span className="text-code-keyword">true</span>,{"\n  "}
+              <span className="text-code-attr">specialty</span>:{" "}
+              <span className="text-code-string">&quot;Web development (literally)&quot;</span>,{"\n  "}
               <span className="text-code-attr">coffeLover</span>:{" "}
-              <span className="text-code-keyword">true</span>,{"\n  "}
+              <span className="text-code-string">&quot;error 418: I&#39;m palpitating&quot;</span>,{"\n  "}
               <span className="text-code-attr">learning</span>:{" "}
-              <span className="text-code-string">&quot;always&quot;</span>
+              <span className="text-code-string">&quot;mostly from coding on paper&quot;</span>
               {"\n};"}
             </pre>
           </div>
@@ -141,11 +141,14 @@ export function HeroSection({ profile }: { profile: Profile | null }) {
           <div className="rounded-xl border border-border/20 bg-card/40 p-3.5 shadow-2xl backdrop-blur-md dark:bg-card/20">
             <p className="font-mono text-[11px]">
               <span className="text-code-string">$</span>{" "}
-              <span className="text-code-function">npm run</span>{" "}
-              <span className="text-foreground/80">build</span>
+              <span className="text-code-function">git commit -m</span>{" "}
+              <span className="text-foreground/80">&quot;fixed bugs (hopefully)&quot;</span>
             </p>
-            <p className="mt-1 font-mono text-xs text-emerald-700 dark:text-emerald-500/80 ">
-              ✓ Compiled successfully
+            <p className="mt-1 font-mono text-xs text-amber-600/80 dark:text-amber-500/60 ">
+              ⚠ 1,234 warnings (ignored)
+            </p>
+            <p className="mt-1 font-mono text-[10px] text-red-500/60 ">
+              Spider-Sense: Tingling (Bugs detected)
             </p>
           </div>
         </FloatingCard>
@@ -177,7 +180,7 @@ export function HeroSection({ profile }: { profile: Profile | null }) {
         >
           <div className="rounded-lg border border-border/15 bg-card/30 px-3 py-2 shadow-xl backdrop-blur-md dark:bg-card/15">
             <p className="text-xs text-code-comment">
-              {"// TODO: Be better than yesterday."}
+              {"// With great power comes great debug-ability."}
             </p>
           </div>
         </FloatingCard>
@@ -192,10 +195,12 @@ export function HeroSection({ profile }: { profile: Profile | null }) {
         >
           <div className="rounded-lg border border-border/15 bg-card/25 px-3 py-2 shadow-lg backdrop-blur-md dark:bg-card/10">
             <p className="text-[11px]">
-              <span className="text-code-keyword">from</span>{" "}
-              <span className="text-code-function">foomodule</span>{" "}
               <span className="text-code-keyword">import</span>{" "}
-              <span className="text-code-string">FooBar, FooBaz</span>
+              {"{ "}
+              <span className="text-code-function">Sanity</span>{" "}
+              {"} "}
+              <span className="text-code-keyword">from</span>{" "}
+              <span className="text-code-string">&quot;node_modules/void&quot;</span>
             </p>
           </div>
         </FloatingCard>
